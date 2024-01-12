@@ -19,7 +19,7 @@ $(NAME) : $(OBJS)
 	touch $@
 
 .c.o:
-	cc -Wall -Wextra -Werror -c $< -o $(<:.c=.o) -I includes
+	cc -Wall -Wextra -Werror -c $< -o $(<:.c=.o) -I ../includes
 
 clean:
 	rm -f $(OBJS) $(OBJS_BONUS)

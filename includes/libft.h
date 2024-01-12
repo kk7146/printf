@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: donson <donson@student.42seoul.kr>         +#+  +:+       +#+        */
+/*   By: eun <eun@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 16:12:43 by donson            #+#    #+#             */
-/*   Updated: 2023/10/18 15:52:44 by donson           ###   ########.fr       */
+/*   Updated: 2024/01/11 16:33:07 by eun              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
 
