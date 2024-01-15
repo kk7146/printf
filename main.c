@@ -4,6 +4,6 @@
 int main()
 {
 	int a;
-	printf("%c %s %p\n", 'a', "asda", &a);
-	ft_printf("%c %s %p\n", 'a', "asda", &a);
+	printf("%c %s %p\n", '0' - 256, NULL, (void *)-14523);
+	ft_printf("%c %s %p\n", '0' - 256, NULL, (void *)-14523);
 }

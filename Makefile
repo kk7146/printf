@@ -6,7 +6,7 @@
 #    By: eun <eun@student.42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/06 09:51:37 by ajordan-          #+#    #+#              #
-#    Updated: 2024/01/11 17:37:02 by eun              ###   ########.fr        #
+#    Updated: 2024/01/12 15:01:42 by eun              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,14 +27,13 @@ LIB_NAME		=	libft.a
 LIBFT			=	$(addprefix $(LIB_DIR)/, $(LIB_NAME))
 
 #srcs
-SRC_NAME		=	ft_printf ft_printf_utils
-SRCS 			=	$(addprefix $(SRC_DIR), $(addsuffix .c, $(SRC_NAME)))
-OBJS			=	$(addprefix $(SRC_DIR), $(addsuffix .o, $(SRC_NAME)))
+SRCS			=	srcs/ft_printf.c srcs/ft_printf_utils.c srcs/ft_printf_convert.c
+OBJS			=	$(SRCS:.c=.o)
 
 all:				$(NAME)
 
-$(OBJS):		$(SRCS)
-					$(CC) -c $< -o $@ -I $(INC_DIR)
+.c.o:
+	$(CC) -c $< -o $(<:.c=.o) -I ../includes
 
 $(NAME):			$(LIBFT) $(OBJS)
 					cp $(LIBFT) $(NAME)
