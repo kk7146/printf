@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: donson <donson@student.42seoul.kr>         +#+  +:+       +#+         #
+#    By: eun <eun@student.42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/06 09:51:37 by ajordan-          #+#    #+#              #
-#    Updated: 2024/01/15 19:02:36 by donson           ###   ########.fr        #
+#    Updated: 2024/01/17 12:55:24 by eun              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ LIB_NAME		=	libft.a
 LIBFT			=	$(addprefix $(LIB_DIR)/, $(LIB_NAME))
 
 #srcs
-SRCS			=	srcs/ft_printf.c srcs/ft_printf_ptr.c srcs/ft_printf_num.c srcs/ft_printf_convert.c
+SRCS			=	srcs/ft_printf.c srcs/ft_printf_print.c srcs/ft_printf_utils.c
 OBJS			=	$(SRCS:.c=.o)
 
 all:				$(NAME)

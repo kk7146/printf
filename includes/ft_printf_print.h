@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_print.h                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: donson <donson@student.42seoul.kr>         +#+  +:+       +#+        */
+/*   By: eun <eun@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 14:56:20 by eun               #+#    #+#             */
-/*   Updated: 2024/01/16 17:38:22 by donson           ###   ########.fr       */
+/*   Updated: 2024/01/17 12:52:43 by eun              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 
 # include <stdarg.h>
 
-char	*convert_ptr(va_list arg_lst, int up);
-char	*convert_string(va_list arg_lst);
-char	*convert_char(va_list arg_lst);
-char	*convert_int(va_list arg_lst, int up);
-char	*convert_hex(va_list arg_lst, int up);
-char	*convert_int_u(va_list arg_lst, int up);
+int	print_ptr(va_list arg_lst);
+int	print_int(va_list arg_lst, int up);
+int	print_hex(va_list arg_lst, int up);
+int	print_int_u(va_list arg_lst);
+int	print_string(va_list arg_lst);
+int	print_char(va_list arg_lst);
 
 #endif
