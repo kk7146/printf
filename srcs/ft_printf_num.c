@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_utils.c                                  :+:      :+:    :+:   */
+/*   ft_printf_num.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eun <eun@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: donson <donson@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 16:05:37 by eun               #+#    #+#             */
-/*   Updated: 2024/01/15 15:28:08 by eun              ###   ########.fr       */
+/*   Updated: 2024/01/16 14:42:03 by donson           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf_utils.h"
+#include "../includes/ft_printf_num.h"
 #include "../includes/libft.h"
 #include "../includes/ft_printf.h"
 #include <stdlib.h>
@@ -38,7 +38,7 @@ static int	ft_itoa_len(long long nbr, int *sign, int base)
 	return (len);
 }
 
-static char	return_hex(long long n, int up)
+static char	return_int(long long n, int up)
 {
 	if (up)
 		return (PRINTF_HEX_ALL_U[n]);
@@ -62,10 +62,10 @@ static unsigned char	*ft_set_chr(int len, long long n, int base, int up)
 			(++chr)[-1] = '-';
 		}
 		else if (n < base)
-			chr[len] = return_hex(n, up);
+			chr[len] = return_int(n, up);
 		else
 		{
-			chr[len] = return_hex(n % base, up);
+			chr[len] = return_int(n % base, up);
 			n /= base;
 		}
 	}
@@ -85,23 +85,4 @@ char	*ft_itoa_base(long long n, int base, int up)
 	if (sign)
 		chr--;
 	return ((char *)chr);
-}
-
-int	print_str(char *str, char format)
-{
-	int	i;
-
-	if (!str)
-	{
-		if (format == 'p')
-		{
-			write(1, "0x0", 3);
-			return (3);
-		}
-		write(1, "(null)", 6);
-		return (6);
-	}
-	i = ft_strlen(str);
-	write(1, str, i);
-	return (i);
 }

@@ -1,29 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_printf_num.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: donson <donson@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/16 13:06:18 by donson            #+#    #+#             */
-/*   Updated: 2024/01/15 18:56:04 by donson           ###   ########.fr       */
+/*   Created: 2024/01/12 14:51:06 by eun               #+#    #+#             */
+/*   Updated: 2024/01/16 14:11:45 by donson           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#ifndef FT_PRINTF_NUM_H
+# define FT_PRINTF_NUM_H
 
-# define PRINTF_CHAR 'c'
-# define PRINTF_STR 's'
-# define PRINTF_PTR 'p'
-# define PRINTF_INT_D	'd'
-# define PRINTF_INT_I	'i'
-# define PRINTF_INT_U	'u'
-# define PRINTF_HEX_L	'x'
-# define PRINTF_HEX_U	'X'
-# define PRINTF_PCT	'%'
-# define PRINTF_ALL	"cspdiuxX%"
+# define PRINTF_HEX_ALL_L "0123456789abcdef"
+# define PRINTF_HEX_ALL_U "0123456789ABCDEF"
 
-int		ft_printf(const char *format, ...);
+char	*ft_itoa_base(long long n, int base, int up);
 
 #endif
